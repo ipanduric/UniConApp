@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UniCon</string>
+    <string name="Distance">D I S T A N C E</string>
+    <string name="Temperature">T E M P E R A T U R E</string>
+    <string name="Speed">S P E E D</string>
+    <string name="Weight">W E I G H T</string>
+    <string name="EnterValue">Enter value...</string>
+    <string name="DistanceConverter">Distance Converter</string>
+    <string name="Convert">CONVERT</string>
+    <string name="TemperatureConverter">Temperature Converter</string>
+    <string name="SpeedConverter">Speed Converter</string>
+    <string name="WeightConverter">Weight Converter</string>
+</resources>

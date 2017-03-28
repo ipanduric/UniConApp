@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTemperatureBg">
+
+    <TextView
+        android:id="@+id/tvTemperatureCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/TemperatureConverter"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        />
+    <Spinner
+        android:id="@+id/sTemp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTemperatureCon"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/etTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/EnterValue"
+        android:layout_below="@id/sTemp1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+    <Spinner
+        android:id="@+id/sTemp2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTemp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp">
+    </Spinner>
+
+    <Button
+        android:id="@+id/bTempConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sTemp2"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorButtonTemp"
+        android:text="@string/Convert"/>
+</RelativeLayout>

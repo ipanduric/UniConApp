@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSpeedBg">
+
+    <TextView
+        android:id="@+id/tvSpeedCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SpeedConverter"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        />
+    <Spinner
+        android:id="@+id/sSpeed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSpeedCon"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/etSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/EnterValue"
+        android:layout_below="@id/sSpeed1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+    <Spinner
+        android:id="@+id/sSpeed2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSpeed"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp">
+    </Spinner>
+
+    <Button
+        android:id="@+id/bDistanceConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sSpeed2"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorButtonSpeed"
+        android:text="@string/Convert"/>
+</RelativeLayout>

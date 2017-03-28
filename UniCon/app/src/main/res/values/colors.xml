@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorDistance">#0000FF</color>
+    <color name="colorDistanceBg">#B3C6FF</color>
+    <color name="colorTemperature">#FF0000</color>
+    <color name="colorTemperatureBg">#FFB3B3</color>
+    <color name="colorSpeed">#008000</color>
+    <color name="colorSpeedBg">#B3FFCC</color>
+    <color name="colorWeight">#800080</color>
+    <color name="colorWeightBg">#ECCEF5</color>
+    <color name="colorResultBg">#F2F5A9</color>
+    <color name="colorButtonDis">#2E64FE</color>
+    <color name="colorButtonTemp">#F78181</color>
+    <color name="colorButtonSpeed">#86B404</color>
+    <color name="colorButtonWeight">#AC58FA</color>
+</resources>
