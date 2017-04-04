@@ -10,4 +10,25 @@
     <string name="TemperatureConverter">Temperature Converter</string>
     <string name="SpeedConverter">Speed Converter</string>
     <string name="WeightConverter">Weight Converter</string>
+    <string name="equals">=</string>
+    <string-array name="Distance">
+        <item>Meter</item>
+        <item>Kilometer</item>
+        <item>Inch</item>
+    </string-array>
+    <string-array name="Temperature">
+        <item>Celsius</item>
+        <item>Kelvin</item>
+        <item>Fahrenheit</item>
+    </string-array>
+    <string-array name="Speed">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mph</item>
+    </string-array>
+    <string-array name="Weight">
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>Pound</item>
+    </string-array>
 </resources>

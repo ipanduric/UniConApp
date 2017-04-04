@@ -1,8 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorResultBg">
 
+    <TextView
+        android:id="@+id/tvInputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvInputUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/tvInputValue"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/tvEquals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/equals"
+        android:textSize="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/tvInputUnit"
+        android:textColor="@color/colorTemperature"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvOutputValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/tvEquals"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvOutputUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/tvOutputValue"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
 
 </RelativeLayout>
+</ScrollView>

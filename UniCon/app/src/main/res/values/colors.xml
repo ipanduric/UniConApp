@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#000000</color>
     <color name="colorDistance">#0000FF</color>
     <color name="colorDistanceBg">#B3C6FF</color>
     <color name="colorTemperature">#FF0000</color>

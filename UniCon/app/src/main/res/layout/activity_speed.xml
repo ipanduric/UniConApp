@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,6 +34,8 @@
         android:layout_below="@id/sSpeed1"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
         />
     <Spinner
         android:id="@+id/sSpeed2"
@@ -41,7 +47,7 @@
     </Spinner>
 
     <Button
-        android:id="@+id/bDistanceConvert"
+        android:id="@+id/bSpeedConvert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/sSpeed2"
@@ -50,3 +56,4 @@
         android:background="@color/colorButtonSpeed"
         android:text="@string/Convert"/>
 </RelativeLayout>
+</ScrollView>
