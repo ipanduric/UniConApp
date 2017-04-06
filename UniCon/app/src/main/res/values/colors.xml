@@ -11,9 +11,10 @@
     <color name="colorSpeedBg">#B3FFCC</color>
     <color name="colorWeight">#800080</color>
     <color name="colorWeightBg">#ECCEF5</color>
-    <color name="colorResultBg">#F2F5A9</color>
+    <color name="colorResultBg">#000000</color>
     <color name="colorButtonDis">#2E64FE</color>
     <color name="colorButtonTemp">#F78181</color>
     <color name="colorButtonSpeed">#86B404</color>
     <color name="colorButtonWeight">#AC58FA</color>
+    <color name="colorRes">#FFFFFF</color>
 </resources>

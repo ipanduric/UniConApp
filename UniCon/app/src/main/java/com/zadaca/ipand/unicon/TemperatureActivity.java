@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 
@@ -53,11 +55,20 @@ public class TemperatureActivity extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
+
+        if(TextUtils.isEmpty(etTemp.getText().toString()))
+        {
+            Toast.makeText(this, "Please enter value!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        else {
         String inUnit, outUnit, textValue;
         inUnit = sTemp1.getSelectedItem().toString();
         outUnit= sTemp2.getSelectedItem().toString();
         String etValue = etTemp.getText().toString();
         Double value = Convert(inUnit, outUnit, etValue);
+        value = round(value, 3);
         textValue = value.toString();
         Intent explicitIntent = new Intent(getApplicationContext(),ResultActivity.class);
         explicitIntent.putExtra(KEY_INPUT_UNIT, inUnit);
@@ -65,7 +76,7 @@ public class TemperatureActivity extends AppCompatActivity implements View.OnCli
         explicitIntent.putExtra(KEY_INPUT_VALUE, etValue);
         explicitIntent.putExtra(KEY_OUTPUT_VALUE, textValue);
         this.startActivity(explicitIntent);
-    }
+    }}
 
     private double Convert (String inUnit, String outUnit, String inValue)
     {
@@ -92,13 +103,23 @@ public class TemperatureActivity extends AppCompatActivity implements View.OnCli
                 break;
             case "Fahrenheit":
                 if (outUnit.equals("Celsius"))
-                    outValue = (numberValue - 32)*(5/9);
+                    outValue = (numberValue - 32)*0.556;
                 if (outUnit.equals("Kelvin"))
-                    outValue = (numberValue + 459.67)*(5/9);
+                    outValue = (numberValue + 459.67)*9/5;
                 if (outUnit.equals("Fahrenheit"))
                     outValue = numberValue;
                 break;
         }
         return outValue;
     }
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
+    }
+
 }

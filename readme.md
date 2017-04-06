@@ -1,0 +1,10 @@
+UniCon je Android aplikacija za preraèunavanje mjernih jedinica. U moguænosti je preraèunati neke od jedinica za 
+udaljenost (m, km, inch), temperaturu (°C, °K, °F), brzinu (m/s, km/h, mps), te težinu (g, kg, lbs).
+
+Samu aplikaciju saèinjavaju šest Activity-a. Glavni, MainActivity, sadrži èetiri ImageView kontrole, svaka od njih predstavlja jednu konverziju i klikom na pojedinu pokreæe se novi Activity, korištenjem eksplicitnog Intenta.
+Svaki od èetiri Activity-a za konverziju sadrži dva Spinnera gdje biramo mjerne jedinice iz kojih, odnosno u koje pretvaramo, te EditText kontrole gdje unosimo vrijednost koju želimo pretvoriti u brojèanom obliku (xml naredba: android:inputType="numberDecimal"). Pretvaranje se vrši klikom na Button "CONVERT", a ukoliko kliknemo na gumb bez unosa vrijednosti izbacuje se Toast poruka na ekranu. [http://stackoverflow.com/questions/20349522/android-check-if-edittext-is-empty-when-inputtype-is-set-on-number-phone]
+Pretvaranje se vrši funkcijom Convert(), koju poziva metoda OnClick(), a vrijednosti se zaokružuju na tri decimale, pozivanjem funkcije round(). [http://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places]
+Vrijednosti se u Spinner dodaju putem ArrayAdapter-a, a èuvaju se u string.xml datoteci kao string-array vrijednosti. [https://developer.android.com/guide/topics/ui/controls/spinner.html] 
+Rezultati svih pretvaranja prikazani su u èetiri TextView-a na ResultActivity-u, koji se pokreæe eksplicitnim Intentom klikom na Button "CONVERT". Podaci, definirani kao parovi kljuè/vrijednost, šalju se korištenjem preoptereæene metode PutExtra(). U ResultActivity-u se putem naredbe hasExtra() provjerava postoji li odreðeni kljuè, te se podatke koji su spremljeni pod tim kljuèem ispisuje u odgovarajuæi TextView.
+
+Aplikacija je testirana na tri ureðaja, Samsung Galaxy S6 i S7 sa Androidom 7.0, te Lenovo A5000 sa verzijom 5.0.2. Veæih problema nije bilo, a sve potrebno pronaðeno je u materijalima sa LV-a i na webu (stackoverflow.com, developer.android.com).

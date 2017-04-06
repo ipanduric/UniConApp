@@ -4,16 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import static com.zadaca.ipand.unicon.ResultActivity.KEY_INPUT_UNIT;
 import static com.zadaca.ipand.unicon.ResultActivity.KEY_INPUT_VALUE;
 import static com.zadaca.ipand.unicon.ResultActivity.KEY_OUTPUT_UNIT;
 import static com.zadaca.ipand.unicon.ResultActivity.KEY_OUTPUT_VALUE;
+import static com.zadaca.ipand.unicon.TemperatureActivity.round;
 
 /**
  * Created by ipand on 28.3.2017..
@@ -47,11 +50,20 @@ public class WeightActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+
+        if(TextUtils.isEmpty(etWeight.getText().toString()))
+        {
+            Toast.makeText(this, "Please enter value!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        else {
         String inUnit, outUnit, textValue;
         inUnit = sWeight1.getSelectedItem().toString();
         outUnit = sWeight2.getSelectedItem().toString();
         String etValue = etWeight.getText().toString();
         Double value = Convert(inUnit, outUnit, etValue);
+        value = round(value,3);
         textValue = value.toString();
         Intent explicitIntent = new Intent(getApplicationContext(),ResultActivity.class);
         explicitIntent.putExtra(KEY_INPUT_UNIT, inUnit);
@@ -59,7 +71,7 @@ public class WeightActivity extends AppCompatActivity implements View.OnClickLis
         explicitIntent.putExtra(KEY_INPUT_VALUE, etValue);
         explicitIntent.putExtra(KEY_OUTPUT_VALUE, textValue);
         this.startActivity(explicitIntent);
-    }
+    }}
 
     private double Convert(String inUnit, String outUnit, String inValue) {
         double outValue = 0;
